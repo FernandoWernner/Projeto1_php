@@ -46,6 +46,7 @@ if ($resultado === false) {
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Telefone</th>
+                        <th>Endereço</th>
                         <th>Cidade</th>
                         <th>Estado</th>
                         <th>Ações</th>
@@ -59,6 +60,7 @@ if ($resultado === false) {
                     <td><?= htmlspecialchars($dados['nome']) ?></td>
                     <td><?= htmlspecialchars($dados['email'] ?? 'Não informado') ?></td>
                     <td><?= htmlspecialchars($dados['telefone'] ?? 'Não informado') ?></td>
+                     <td><?= htmlspecialchars($dados['endereco'] ?? 'Não informado') ?></td>
                     <td><?= htmlspecialchars($dados['cidade']) ?></td>
                     <td><?= htmlspecialchars($dados['estado']) ?></td>
                     <td>
@@ -69,6 +71,7 @@ if ($resultado === false) {
                                         '<?= htmlspecialchars($dados['nome']) ?>',
                                         '<?= htmlspecialchars($dados['email'] ?? '') ?>',
                                         '<?= htmlspecialchars($dados['telefone'] ?? '') ?>',
+                                        '<?= htmlspecialchars($dados['endereco'] ?? '') ?>',
                                         '<?= htmlspecialchars($dados['cidade']) ?>',
                                         '<?= htmlspecialchars($dados['estado']) ?>'
                                     )">
@@ -127,6 +130,10 @@ if ($resultado === false) {
             <input type="text" name="telefone" class="form-control">
           </div>
           <div class="mb-3">
+            <label class="form-label">Endereço:</label>
+            <textarea name="endereco" class="form-control" rows="2"></textarea>
+          </div>
+          <div class="mb-3">
             <label class="form-label">Cidade:</label>
             <input type="text" name="cidade" class="form-control">
           </div>
@@ -168,6 +175,10 @@ if ($resultado === false) {
             <input type="text" name="telefone" id="editClienteTelefone" class="form-control">
           </div>
           <div class="mb-3">
+            <label class="form-label">Endereço:</label>
+            <textarea name="endereco" id="editClienteEndereco" class="form-control" rows="2"></textarea>
+          </div>
+          <div class="mb-3">
             <label class="form-label">Cidade:</label>
             <input type="text" name="cidade" id="editClienteCidade" class="form-control">
           </div>
@@ -188,11 +199,12 @@ if ($resultado === false) {
 <!-- Script para os modals de clientes -->
 <script>
 // Função para carregar dados no modal de edição de cliente
-function carregarDadosEdicaoCliente(id, nome, email, telefone, cidade, estado) {
+function carregarDadosEdicaoCliente(id, nome, email, telefone, endereco, cidade, estado) {
     document.getElementById('editClienteId').value = id;
     document.getElementById('editClienteNome').value = nome;
     document.getElementById('editClienteEmail').value = email;
     document.getElementById('editClienteTelefone').value = telefone;
+    document.getElementById('editClienteEndereco').value = endereco;
     document.getElementById('editClienteCidade').value = cidade;
     document.getElementById('editClienteEstado').value = estado;
     
