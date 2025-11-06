@@ -1,0 +1,218 @@
+/* dark.css — overrides for dark theme */
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --card: #0f1724;
+  --muted: #9aa4b2;
+  --text: #e6eef8;
+  --primary: #4f8cff;
+  --radius: 12px;
+  --shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  --table-head: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .header-shadow {
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .card-like {
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+[data-theme="dark"] .table thead tr {
+  background: var(--table-head) !important;
+}
+
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--text) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--muted) !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+  border-color: var(--muted);
+  color: var(--muted);
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+  background-color: var(--muted);
+  color: var(--bg);
+}
+
+[data-theme="dark"] footer {
+  color: var(--muted);
+}
+
+/* Garantir que inputs e selects fiquem com tema escuro */
+[data-theme="dark"] input.form-control,
+[data-theme="dark"] textarea.form-control,
+[data-theme="dark"] select.form-control {
+  background-color: var(--card);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+[data-theme="dark"] input.form-control:focus,
+[data-theme="dark"] textarea.form-control:focus,
+[data-theme="dark"] select.form-control:focus {
+  background-color: var(--card);
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+[data-theme="dark"] .table {
+    --bs-table-bg: var(--card);
+    --bs-table-color: var(--text);
+    --bs-table-border-color: var(--border);
+}
+
+[data-theme="dark"] .table th {
+    background-color: var(--table-head) !important;
+    color: var(--text) !important;
+    border-bottom-color: var(--border) !important;
+}
+
+[data-theme="dark"] .table td {
+    background-color: var(--card) !important;
+    color: var(--text) !important;
+    border-bottom-color: var(--border) !important;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+    --bs-table-accent-bg: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text) !important;
+}
+
+[data-theme="dark"] .table-responsive {
+    background-color: var(--card);
+    border-radius: var(--radius);
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    --bs-btn-color: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: var(--primary);
+    --bs-btn-hover-border-color: var(--primary);
+}
+
+[data-theme="dark"] .btn-outline-danger {
+    --bs-btn-color: #e74c3c;
+    --bs-btn-border-color: #e74c3c;
+    --bs-btn-hover-bg: #e74c3c;
+    --bs-btn-hover-border-color: #e74c3c;
+}
+
+[data-theme="dark"] .btn-primary {
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: #3a7cff;
+    --bs-btn-hover-border-color: #3a7cff;
+}
+
+[data-theme="dark"] main {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] div {
+    color: var(--text) !important;
+}
+
+[data-theme="dark"] .card-like {
+    background-color: var(--card) !important;
+    color: var(--text) !important;
+}
+
+/* ===== CORREÇÕES PARA MODALS NO TEMA ESCURO ===== */
+
+[data-theme="dark"] .modal-content {
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .modal-header {
+    background-color: var(--table-head);
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+}
+
+[data-theme="dark"] .modal-footer {
+    background-color: var(--table-head);
+    border-top: 1px solid var(--border);
+}
+
+[data-theme="dark"] .modal-title {
+    color: var(--text);
+}
+
+[data-theme="dark"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+[data-theme="dark"] .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    color: var(--text);
+    box-shadow: 0 0 0 0.2rem rgba(79, 140, 255, 0.25);
+}
+
+[data-theme="dark"] .form-label {
+    color: var(--text);
+}
+
+[data-theme="dark"] .alert-success {
+    background-color: rgba(25, 135, 84, 0.2);
+    border-color: rgba(25, 135, 84, 0.3);
+    color: #75b798;
+}
+
+[data-theme="dark"] .alert-success .btn-close {
+    filter: invert(0);
+}
+
+[data-theme="dark"] .modal-backdrop {
+    background-color: #000;
+}
+
+[data-theme="dark"] .modal-backdrop.show {
+    opacity: 0.7;
+}
+
+/* Garantir que os textos dentro do modal fiquem claros */
+[data-theme="dark"] .modal-body {
+    color: var(--text);
+}
+
+/* Correção para os botões dentro do modal */
+[data-theme="dark"] .modal-footer .btn {
+    color: var(--text);
+}

@@ -1,0 +1,74 @@
+/* style.css — Soft Material (light) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --text:#0f172a;
+  --primary:#2563eb;
+  --radius:12px;
+  --shadow: 0 6px 20px rgba(16,24,40,0.06);
+  --table-head:#f1f5f9;
+  --border:#e6eef8;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:'Inter',system-ui,Arial,Helvetica;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* header */
+.header-shadow {
+  background:transparent;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter: blur(6px);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.brand-title{ font-weight:600; font-size:1.05rem; color:var(--text); }
+
+/* container and cards */
+.container{ max-width:1100px; margin-top:26px; }
+.card-like{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; }
+
+/* tables */
+.table { width:100%; border-collapse:collapse; margin-top:12px; background:var(--card); border-radius:8px; overflow:hidden;}
+.table thead tr { background:var(--table-head); }
+.table th, .table td { padding:12px 14px; border-bottom:1px solid var(--border); text-align:left; font-size:14px; color:var(--text); }
+.table th { font-weight:600; color:var(--muted); font-size:13px; }
+.table tbody tr:hover { background: rgba(37,99,235,0.03); transition:all 0.12s ease; }
+
+/* forms */
+.form-container { max-width:720px; margin:18px auto; }
+input.form-control, textarea.form-control, select.form-control {
+  border-radius:8px; border:1px solid var(--border);
+  box-shadow:none; padding:10px 12px;
+}
+input.form-control:focus, textarea.form-control:focus {
+  border-color:var(--primary); box-shadow:0 8px 24px rgba(37,99,235,0.06);
+}
+
+/* footer */
+.main-footer { 
+  background: transparent; 
+  border-top: 1px solid rgba(0,0,0,0.04); 
+  color: var(--muted);
+}
+
+/* small utilities */
+.text-muted { color:var(--muted); }
+.btn-primary { background:var(--primary); border-color:var(--primary); }
+.btn-primary:hover { background:#1e4acb; border-color:#1e4acb; transform:translateY(-1px); }
+
+/* responsive tweaks */
+@media (max-width:767px){
+  .brand-title { font-size:0.98rem; }
+  .container{ padding-left:12px; padding-right:12px; }
+}
